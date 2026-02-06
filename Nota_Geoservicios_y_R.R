@@ -2,11 +2,11 @@
 # 1. Conexión a los geoservicios WFS de IDECOR desde R --------------------
 
 # Paquetes necesarios ---------------------------------------------------
-install.packages(sf)
+install.packages("sf")
 library(sf)
-install.packages(httr)
+install.packages("httr")
 library(httr)
-install.packages(ows4R)
+install.packages("ows4R")
 library(ows4R)  # Cliente para servicios OGC
 
 
@@ -50,7 +50,7 @@ incendios_2024 <- read_sf(build_url(incendios_2024_url))
 
 
 # 3. Visualización interactiva con leaflet --------------------------------
-install.packages(leaflet)
+install.packages("leaflet")
 library(leaflet)
 
 
@@ -72,7 +72,7 @@ leaflet() %>%
 
 
 # 4. Visualizacion con tmap -----------------------------------------------
-install.packages(tmap)
+install.packages("tmap")
 library(tmap)
 
 tmap_mode("view")  # usar "plot" para salida estática
@@ -86,9 +86,9 @@ tm_shape(provincia) +
 
 
 # 5. Grafico simple con ggplot2 -------------------------------------------
-install.packages(dplyr)
+install.packages("dplyr")
 library(dplyr)
-install.packages(ggplot2)
+install.packages("ggplot2")
 library(ggplot2)
 
 # Grafico de area quemada por departamento
@@ -106,5 +106,6 @@ incendios_2024 %>%
     y = "Área quemada (ha)"
   ) +
   theme_minimal()
+
 
 
